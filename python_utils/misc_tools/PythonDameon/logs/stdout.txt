@@ -1,0 +1,51 @@
+https://pgdx-lims.ad.personalgenome.com/api/v2/processes/24-160401
+successfully sent the mail
+https://pgdx-lims.ad.personalgenome.com/api/v2/processes/24-160736
+successfully sent the mail
+https://pgdx-lims.ad.personalgenome.com/api/v2/processes/24-160739
+successfully sent the mail
+https://pgdx-lims.ad.personalgenome.com/api/v2/processes/24-160745
+successfully sent the mail
+start
+https://pgdx-lims.ad.personalgenome.com/api/v2/processes/24-161424
+successfully sent the mail
+https://pgdx-lims.ad.personalgenome.com/api/v2/processes/24-161425
+successfully sent the mail
+https://pgdx-lims.ad.personalgenome.com/api/v2/processes/24-161428
+successfully sent the mail
+https://pgdx-lims.ad.personalgenome.com/api/v2/processes/24-162185
+successfully sent the mail
+https://pgdx-lims.ad.personalgenome.com/api/v2/processes/24-163016
+successfully sent the mail
+https://pgdx-lims.ad.personalgenome.com/api/v2/processes/24-163254
+successfully sent the mail
+https://pgdx-lims.ad.personalgenome.com/api/v2/processes/24-164661
+successfully sent the mail
+https://pgdx-lims.ad.personalgenome.com/api/v2/processes/24-164663
+https://pgdx-lims.ad.personalgenome.com/api/v2/processes/24-164716
+successfully sent the mail
+https://pgdx-lims.ad.personalgenome.com/api/v2/processes/24-164719
+https://pgdx-lims.ad.personalgenome.com/api/v2/processes/24-164724
+https://pgdx-lims.ad.personalgenome.com/api/v2/processes/24-165174
+successfully sent the mail
+https://pgdx-lims.ad.personalgenome.com/api/v2/processes/24-165473
+successfully sent the mail
+https://pgdx-lims.ad.personalgenome.com/api/v2/processes/24-166057
+https://pgdx-lims.ad.personalgenome.com/api/v2/processes/24-167782
+successfully sent the mail
+https://pgdx-lims.ad.personalgenome.com/api/v2/processes/24-169432
+https://pgdx-lims.ad.personalgenome.com/api/v2/processes/24-169502
+successfully sent the mail
+https://pgdx-lims.ad.personalgenome.com/api/v2/processes/24-174370
+successfully sent the mail
+https://pgdx-lims.ad.personalgenome.com/api/v2/processes/24-175126
+https://pgdx-lims.ad.personalgenome.com/api/v2/processes/24-175127
+https://pgdx-lims.ad.personalgenome.com/api/v2/processes/24-175127
+https://pgdx-lims.ad.personalgenome.com/api/v2/processes/24-175129
+successfully sent the mail
+https://pgdx-lims.ad.personalgenome.com/api/v2/processes/24-175131
+successfully sent the mail
+https://pgdx-lims.ad.personalgenome.com/api/v2/processes/24-175173
+successfully sent the mail
+https://pgdx-lims.ad.personalgenome.com/api/v2/processes/24-175176
+successfully sent the mail

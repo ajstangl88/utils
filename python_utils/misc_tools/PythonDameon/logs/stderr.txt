@@ -1,0 +1,129 @@
+Traceback (most recent call last):
+  File "./managerWatcher.py", line 44, in <module>
+    daemon.start()
+  File "/opt/opt-packages/pgdxclarityutil-1.5/PythonDameon/Daemon.py", line 105, in start
+    self.run()
+  File "./managerWatcher.py", line 22, in run
+    with open(trueFile,'r') as f:
+IOError: [Errno 21] Is a directory: '/root/managerNotifications/processed'
+[2017-01-12T17:13:10] No next-actions found for 24-160401. Setting Default Next Step
+[2017-01-13T15:56:28] No next-actions found for 24-160736. Setting Default Next Step
+[2017-01-13T15:56:30] 24-160736 Is still on progress
+[2017-01-13T15:56:40] 24-160736 Is still on progress
+[2017-01-13T16:06:52] No next-actions found for 24-160739. Setting Default Next Step
+[2017-01-13T16:06:54] 24-160739 Is still on progress
+[2017-01-13T16:12:06] No next-actions found for 24-160745. Setting Default Next Step
+[2017-01-13T16:12:06] 24-160745 Is still on progress
+[2017-01-13T16:12:17] 24-160745 Is still on progress
+[2017-01-13T16:12:27] 24-160745 Is still on progress
+python: can't open file 'awaitNotifiy.py': [Errno 2] No such file or directory
+python: can't open file 'awaitNotifiy.py': [Errno 2] No such file or directory
+python: can't open file 'awaitNotifiy.py': [Errno 2] No such file or directory
+python: can't open file 'awaitNotifiy.py': [Errno 2] No such file or directory
+python: can't open file 'awaitNotifiy.py': [Errno 2] No such file or directory
+python: can't open file 'awaitNotifiy.py': [Errno 2] No such file or directory
+python: can't open file 'awaitNotifiy.py': [Errno 2] No such file or directory
+python: can't open file 'awaitNotifiy.py': [Errno 2] No such file or directory
+python: can't open file 'awaitNotifiy.py': [Errno 2] No such file or directory
+python: can't open file 'awaitNotifiy.py': [Errno 2] No such file or directory
+python: can't open file 'awaitNotifiy.py': [Errno 2] No such file or directory
+Traceback (most recent call last):
+  File "./managerWatcher.py", line 45, in <module>
+    daemon.start()
+  File "/opt/opt-packages/pgdxclarityutil-1.5/PythonDameon/Daemon.py", line 105, in start
+    self.run()
+  File "./managerWatcher.py", line 25, in run
+    proc = os.system(cmd)
+TypeError: system() argument 1 must be string without null bytes, not str
+/var/tmp/scl9nxruG: line 8: /opt/pgdxtools_py3/general/bin/awaitNotifiy.py: No such file or directory
+python: can't open file 'awaitNotifiy.py': [Errno 2] No such file or directory
+usage: scl <action> [<collection>...] <command>
+   or: scl -l|--list [<collection>...]
+
+Options:
+    -l, --list            list installed Software Collections or packages
+                          that belong to them
+    -h, --help            display this help and exit
+
+Actions:
+    enable                calls enable script from Software Collection
+                          (enables a Software Collection)
+    <SCL script name>     calls arbitrary script from a Software Collection
+
+Use '-' as <command> to read the command from standard input.
+GET	https://pgdx-lims.ad.personalgenome.com/api/v2/steps/24-161100
+INFO	Current State Record Details
+INFO	Awaiting ['Under Review'] with config: ['Under Review']
+GET	https://pgdx-lims.ad.personalgenome.com/api/v2/steps/24-161100
+GET	https://pgdx-lims.ad.personalgenome.com/api/v2/steps/24-161100
+GET	https://pgdx-lims.ad.personalgenome.com/api/v2/steps/24-161100
+GET	https://pgdx-lims.ad.personalgenome.com/api/v2/steps/24-161100
+GET	https://pgdx-lims.ad.personalgenome.com/api/v2/steps/24-161100
+GET	https://pgdx-lims.ad.personalgenome.com/api/v2/steps/24-161100
+GET	https://pgdx-lims.ad.personalgenome.com/api/v2/steps/24-161100
+GET	https://pgdx-lims.ad.personalgenome.com/api/v2/steps/24-161100
+GET	https://pgdx-lims.ad.personalgenome.com/api/v2/steps/24-161100
+GET	https://pgdx-lims.ad.personalgenome.com/api/v2/steps/24-161100
+GET	https://pgdx-lims.ad.personalgenome.com/api/v2/steps/24-161100
+GET	https://pgdx-lims.ad.personalgenome.com/api/v2/steps/24-161100
+GET	https://pgdx-lims.ad.personalgenome.com/api/v2/steps/24-161100
+GET	https://pgdx-lims.ad.personalgenome.com/api/v2/steps/24-161100
+GET	https://pgdx-lims.ad.personalgenome.com/api/v2/steps/24-161100
+GET	https://pgdx-lims.ad.personalgenome.com/api/v2/steps/24-161100
+GET	https://pgdx-lims.ad.personalgenome.com/api/v2/steps/24-161100
+GET	https://pgdx-lims.ad.personalgenome.com/api/v2/steps/24-161100
+GET	https://pgdx-lims.ad.personalgenome.com/api/v2/steps/24-161100
+GET	https://pgdx-lims.ad.personalgenome.com/api/v2/steps/24-161100
+WARN	['Under Review'] was never found
+[2017-01-16T12:59:56] No next-actions found for 24-161424. Setting Default Next Step
+[2017-01-16T13:00:59] No next-actions found for 24-161425. Setting Default Next Step
+[2017-01-16T13:01:00] 24-161425 Is still on progress
+[2017-01-16T13:01:10] 24-161425 Is still on progress
+[2017-01-16T13:01:20] 24-161425 Is still on progress
+[2017-01-16T13:04:32] No next-actions found for 24-161428. Setting Default Next Step
+[2017-01-17T16:33:07] No next-actions found for 24-162185. Setting Default Next Step
+[2017-01-19T11:19:30] No next-actions found for 24-163016. Setting Default Next Step
+[2017-01-19T11:19:31] 24-163016 Is still on progress
+[2017-01-19T11:19:41] 24-163016 Is still on progress
+[2017-01-19T11:19:51] 24-163016 Is still on progress
+[2017-01-19T15:10:19] No next-actions found for 24-163254. Setting Default Next Step
+[2017-01-19T15:10:22] 24-163254 Is still on progress
+[2017-01-19T15:10:32] 24-163254 Is still on progress
+[2017-01-23T14:36:59] No next-actions found for 24-164661. Setting Default Next Step
+[2017-01-23T14:37:00] 24-164661 Is still on progress
+[2017-01-23T16:26:19] No next-actions found for 24-164716. Setting Default Next Step
+[2017-01-23T16:39:22] No next-actions found for 24-164719. Setting Default Next Step
+[2017-01-25T08:27:35] No next-actions found for 24-165174. Setting Default Next Step
+[2017-01-25T08:27:37] 24-165174 Is still on progress
+[2017-01-25T08:27:47] 24-165174 Is still on progress
+[2017-01-25T08:27:58] 24-165174 Is still on progress
+[2017-01-25T10:57:18] No next-actions found for 24-165473. Setting Default Next Step
+[2017-01-25T10:57:19] 24-165473 Is still on progress
+[2017-01-25T10:57:30] 24-165473 Is still on progress
+[2017-01-30T22:56:58] No next-actions found for 24-167782. Setting Default Next Step
+[2017-02-02T11:23:20] No next-actions found for 24-169432. Setting Default Next Step
+[2017-02-02T11:23:22] 24-169432 Is still on progress
+[2017-02-02T11:23:32] 24-169432 Is still on progress
+[2017-02-02T12:27:46] No next-actions found for 24-169502. Setting Default Next Step
+[2017-02-08T16:46:01] No next-actions found for 24-174370. Setting Default Next Step
+[2017-02-08T16:46:02] 24-174370 Is still on progress
+[2017-02-08T16:46:12] 24-174370 Is still on progress
+[2017-02-08T16:46:22] 24-174370 Is still on progress
+[2017-02-08T16:46:33] 24-174370 Is still on progress
+[2017-02-08T16:46:43] 24-174370 Is still on progress
+[2017-02-08T16:46:53] 24-174370 Is still on progress
+[2017-02-08T16:47:04] 24-174370 Is still on progress
+[2017-02-09T11:08:16] No next-actions found for 24-175126. Setting Default Next Step
+[2017-02-09T11:10:17] No next-actions found for 24-175127. Setting Default Next Step
+Traceback (most recent call last):
+  File "/opt/opt-packages/pgdxclarityutil-1.5/managerNotify.py", line 335, in <module>
+    main()
+  File "/opt/opt-packages/pgdxclarityutil-1.5/managerNotify.py", line 319, in main
+    comment = dataDict['comment']
+KeyError: 'comment'
+[2017-02-09T11:11:20] No next-actions found for 24-175127. Setting Default Next Step
+[2017-02-09T11:12:21] No next-actions found for 24-175129. Setting Default Next Step
+[2017-02-09T11:12:22] 24-175129 Is still on progress
+[2017-02-09T11:17:34] No next-actions found for 24-175131. Setting Default Next Step
+[2017-02-09T12:48:42] No next-actions found for 24-175173. Setting Default Next Step
+[2017-02-09T12:51:44] No next-actions found for 24-175176. Setting Default Next Step
