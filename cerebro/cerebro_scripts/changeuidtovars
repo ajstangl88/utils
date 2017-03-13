@@ -1,0 +1,21 @@
+#!/usr/bin/perl
+
+use strict;
+
+while(my $line = <>) {
+    chomp $line;
+    my ($chr,$frompos,$topos,$from,$to) = $line =~ /([^:]+):(\d+)-(\d+)_([^_]*)_([^_]*)/;
+
+    $from = $from ? $from : '(null)';
+    $to = $to ? $to : '(null)';
+
+
+    my $type = 'SBS';
+    if(length($from) > length($to)) {
+        $type = 'DEL';
+    }
+    elsif(length($from) < length($to)) {
+        $type = 'INS';
+    }
+    print "$chr:$frompos-$topos\_$from\_$to\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0\t0.000000\t0\t0\t0\t0\t0\t0.000000\t$type\t$chr\t$frompos\t$topos\t$from\t$to\t0\t$line\t0\t0\t0\t0.000000\t0\t0\t0.000000\t0.000000\t0.000000\t0.000000\t0\t0\n";
+}
