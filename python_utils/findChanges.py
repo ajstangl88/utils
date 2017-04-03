@@ -32,7 +32,7 @@ VERSION
 
 """
 
-import sys, os, re, subprocess, glob, argparse, time
+import sys, subprocess, glob, argparse
 
 
 def runCommand(command):
@@ -60,15 +60,21 @@ def findChangesSheets(pipeline):
 
     # Set the array that will contain the path to all changes sheet
     changesSheets = []
+
     # Loop over the pipelines and collect the ChangesSheet
     for pipe in pipeline:
-        myGlob = pipe + "/TN/*TN.CombinedChanges.txt"
+
+        # myGlob = pipe + "/TN/*TN.CombinedChanges.txt"
+        myGlob = pipe + "/{}/*{}.CombinedChanges.txt".format(folder, folder)
 
         ret = glob.glob(myGlob)
+
         # Only append a result if glob has found a file
-        if len(ret) > 0: changesSheets.append(ret[0])
+        if len(ret) > 0:
+            changesSheets.append(ret[0])
 
     return changesSheets
+
 
 def grepChanges(changessheet, search_term):
     """
@@ -88,6 +94,7 @@ def grepChanges(changessheet, search_term):
 
     return result
 
+
 def main():
     # An array of pipelines
     pipelines = findPipeline(casetype)
@@ -103,28 +110,43 @@ def main():
         print item
 
 
-
 if __name__ == '__main__':
     # Set up the Argument Parser...
     parser = argparse.ArgumentParser()
     parser.add_argument('-type', action='store', dest='casetype', help='Type of Case (Cp6, Cp4, PS, CpCS, all)',
                         default="all")
+
+    parser.add_argument('-folder', action='store', dest='foldertype', help='Type of Folder(TN, TN_TO, UN)',
+                        default="TN_TO")
     parser.add_argument('-search', action='store', dest='searchTerm', help='Value to grep for',
                         default="chr5.fa:1295228-1295228_G_A")
     opts = parser.parse_args()
 
-
+    # Types of Cases
     caseDict = {
-        'CpCs':'CpCs',
-        'Cp6':'Cp6',
-        'PS':'PS',
-        'all':'CpCS\|Cp4\|Cp6\|PS'
+        'CpCs': 'CpCs',
+        'Cp6': 'Cp6',
+        'Cp4': 'Cp4',
+        'PS': 'PS',
+        'all': 'CpCS\|Cp4\|Cp6'
     }
 
+    # Types of Folders
+    folders = {
+        'UN': 'UN',
+        'TN_TO': 'TN_TO',
+        'TN': 'TN'
+    }
+
+    # Set the global for folder to search for
+    foldertype = opts.foldertype
+    folder = folders[foldertype]
+
+    # Set the global for the case type
     casetype = opts.casetype
     casetype = caseDict[casetype]
+
+    # Set the global search term
     search = opts.searchTerm
 
     main()
-    # start_time = time.time()
-    # print("--- %s seconds ---" % (time.time() - start_time))
