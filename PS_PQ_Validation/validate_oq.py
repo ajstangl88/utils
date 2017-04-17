@@ -31,3 +31,17 @@ VERSION
     :Version 
 
 """
+import os, sys, csv, ConfigParser
+
+config = ConfigParser.RawConfigParser()
+config.readfp(open("config.ini"))
+print config.items("seq_only")
+
+
+def validate_seq_only(seq_file, mapping_file):
+    pass
+
+def check_msi(msifile, seq_msi_mapping):
+    # Split row, read second to last index, count MSI
+    # Return Positive Counts
+    pass
