@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import sys
-myfile = "/Users/astangl/Desktop/runit_v2.txt"
+myfile = "/Users/astangl/Desktop/testrun.txt"
 
 with open(myfile, 'r') as f:
     lines = f.read().splitlines()
@@ -14,9 +14,9 @@ for line in lines[1:]:
     sample_name2 = elts[4]
     run_name2 = elts[5]
     outdir = elts[6]
-    mapping_file = "/mnt/user_data/astangl/staging/mappingfile_v2.txt"
+    mapping_file = "/mnt/user_data/astangl/staging/newMappingFile.txt"
 
-    command = "perl comparePairMaker_Plasma.pl --sample_location1={} --sample_name1={} --run_name1={} --sample_location2={} --sample_name2={} --run_name2={} --outdir={} --mapping_file={}".format(
+    command = "perl /mnt/user_data/astangl/compareChanges/comparePairMaker_Plasma.pl --sample_location1={} --sample_name1={} --run_name1={} --sample_location2={} --sample_name2={} --run_name2={} --outdir={} --mapping_file={}".format(
         elts[0],
         elts[1],
         elts[2],
