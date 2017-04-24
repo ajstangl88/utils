@@ -14,10 +14,11 @@ open (my $fh, "<$infile") or die "Could not open file '$infile' $!";
 while (my $line = <$fh>) {
     chomp($line);
     my ($tagname, $host, $dest) = split('\t', $line);
+    print "$tagname\n$host\n$dest";
     my @desthosts = split(/,/, $dest);
     my $pm = new Parallel::ForkManager(10);
-
     foreach my $h (@desthosts) {
+        print "$h\n";
         my $pid = $pm->start and next;
         print "Getting Tag\n";
         my $tag = &PGDX::Tag::get_tag($tagname, $host);
