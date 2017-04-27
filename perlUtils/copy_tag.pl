@@ -8,7 +8,10 @@ use PGDX::Tag;
 use Data::Dumper;
 use Parallel::ForkManager;
 
-my $infile = $ARGV[0];
+
+#my $infile = $ARGV[0];
+my $infile = "/Users/astangl/PycharmProjects/utils/perlUtils/tag_list.tsv";
+
 open (my $fh, "<$infile") or die "Could not open file '$infile' $!";
 
 while (my $line = <$fh>) {

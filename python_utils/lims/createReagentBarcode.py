@@ -29,8 +29,7 @@ def writeTSV(data):
     fname = data['name'] + '.csv'
     fname = fname.replace(" ", "")
     with open(fname, 'w') as f:
-        f.write('%BTW% /AF="C:\\limslabels\\reageants\\reagent.btw" /C=' + data[
-            'copies'] + ' /D=%Trigger File Name% /PRN="pgdx-zebra' + data['printer'] + '"' + ' /R=3 /P' + '\r')
+        f.write('%BTW% /AF="C:\\limslabels\\reageants\\reagent.btw" /C=' + data['copies'] + ' /D=%Trigger File Name% /PRN="pgdx-zebra' + data['printer'] + '"' + ' /R=3 /P' + '\r')
         f.write('%END%' + '\r')
         f.write('barcode,name,exp_date,lot' + '\r')
         f.write(encoded + ',' + data['name'] + ',' + 'EXP:' + data['exp_date'] + ',' + 'LOT #' + data['lot'])
