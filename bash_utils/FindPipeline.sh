@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 # This script will take in a txt file for pipeline names (take them from the process log) and write a list of paths
 # To the desired pipeline names
 
