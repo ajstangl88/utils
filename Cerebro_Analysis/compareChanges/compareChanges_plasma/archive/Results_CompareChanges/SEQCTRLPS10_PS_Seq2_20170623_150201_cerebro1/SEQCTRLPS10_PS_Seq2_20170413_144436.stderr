@@ -1,0 +1,13 @@
+DEBUG: Score, TxBaseFrom, Tum RMS MAPQ, Norm RMS MAPQ, Tum NERDist Mean, Tum NERDist SD, Tum Mut RMS MAPQ, GC count, AT count, RMD Score, Normal Bqual Mean, Fisher Left, Fisher Right, Fisher Two-tail, Var Type, Var Length, RepeatMasker, RepeatMaskerDistance, GC_Percent, BWA Tum Var Quality, BWA Tum Distinct Cov, BWA Tum Distinct Pairs, BWA Tum MAF, BWA Strand Bias Z, BWA Strand Bias 50CI_L, BWA Strand Bias 50CI_H, BWA Tum Mean Base Quality, BWA Tum NERDist Mean, BWA Tum NERDist SD, BWA Tum RMS MAPQ, BWA Tum Mut RMS MAPQ, BWA Tum Mean Num Mismatches, BWA Tum Mut Mean Num Mismatches, BWA Mut MAPQ Difference, BWA Supermut Count, BWA Supermut Avg, BWA Supermut MAF, BWA Supermut Cov, BT2 Tum Var Quality, BT2 Tum Distinct Cov, BT2 Tum Distinct Pairs, BT2 Tum MAF, BT2 Strand Bias Z, BT2 Strand Bias 50CI_L, BT2 Strand Bias 50CI_H, BT2 Tum Mean Base Quality, BT2 Tum NERDist Mean, BT2 Tum NERDist SD, BT2 Tum RMS MAPQ, BT2 Tum Mut RMS MAPQ, BT2 Tum Mean Num Mismatches, BT2 Tum Mut Mean Num Mismatches, BT2 Mut MAPQ Difference, BT2 Supermut Count, BT2 Supermut Avg, BT2 Supermut MAF, BT2 Supermut Cov, DUST, ensg_id, ensg_id2, GeneInfo_Transcript, ExAC: AC, ExAC: AF, ExAC: AN, ExAC: AN_Adj, ExAC: BaseQRankSum, ExAC: ClippingRankSum, ExAC: DP, ExAC: FS, ExAC: GQ_MEAN, ExAC: GQ_STDDEV, ExAC: MQ, ExAC: MQ0, ExAC: MQRankSum, ExAC: NCC, ExAC: QD, ExAC: ReadPosRankSum, ExAC: VQSLOD, ExAC: culprit, ExAC: DOUBLETON_DIST, ExAC: K1_RUN, ExAC: K2_RUN, ExAC: K3_RUN
+Printing to /mnt/user_data/astangl/compareChanges/compareChanges_plasma/Results_CompareChanges/SEQCTRLPS10_PS_Seq2_20170623_150201_cerebro1/diffs/SEQCTRLPS10_PS_Seq2_20170623_150201_cerebro.PlasmaChanges.comparison.txt
+About to compare files
+About to read 1000000 lines
+Read 70 lines
+Reading through /data28-pgdx-pod14/Testing/SEQCTRLPS10_PS_Seq2_20170623_150201_cerebro//SEQCTRLPS10_PS_Seq2_20170623_150201_cerebro.PlasmaChanges.txt
+About to read 1000000 lines
+Read 0 lines
+About to read 1000000 lines
+Read 33 lines
+Reading through /data26-pgdx-pod13/Samples/SEQCTRLPS10_PS_Seq2_20170413_144436/SEQCTRLPS10_PS_Seq2_20170413_144436.PlasmaChanges.txt
+About to read 1000000 lines
+Read 0 lines

@@ -1,0 +1,278 @@
+Comparing a pgdx_somatics-cancerselect-somatics-5.3.0b6 run with cancerselect-somatics-5.3.0b11 run
+Comparing Tumor Fraction of 0.2 with 0.2
+Creating Output Directory: /mnt/user_data/astangl/compareChanges/compareChanges_somatic/Results_CompareChanges/RDCSVA006_N_S2T_Cp6_20170719_1439331
+
+Time Elapsed: 0 seconds
+Program has completed please check the output directory: /mnt/user_data/astangl/compareChanges/compareChanges_somatic/Results_CompareChanges/RDCSVA006_N_S2T_Cp6_20170719_1439331
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 125, <IFH> line 2.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 126, <IFH> line 2.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA006_N_S2T_Cp6_20170719_143933/TN/RDCSVA006_N_S2T_Cp6_20170719_143933_TN.msi.txt'
+diff: Try `diff --help' for more information.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 131, <IFH> line 2.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA006_N_S2T_Cp6_20170719_143933/TN/RDCSVA006_N_S2T_Cp6_20170719_143933_TN.msi.txt'
+diff: Try `diff --help' for more information.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 137, <IFH> line 2.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA006_N_S2T_Cp6_20170719_143933/TN/RDCSVA006_N_S2T_Cp6_20170719_143933_TN.msi.txt'
+diff: Try `diff --help' for more information.
+Comparing a pgdx_somatics-cancerselect-somatics-5.3.0b6 run with cancerselect-somatics-5.3.0b11 run
+Comparing Tumor Fraction of 0.4 with 0.4
+Creating Output Directory: /mnt/user_data/astangl/compareChanges/compareChanges_somatic/Results_CompareChanges/RDCSVA038_N_G1T_Cp6_20170719_1432142
+
+Time Elapsed: 0 seconds
+Program has completed please check the output directory: /mnt/user_data/astangl/compareChanges/compareChanges_somatic/Results_CompareChanges/RDCSVA038_N_G1T_Cp6_20170719_1432142
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 125, <IFH> line 3.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 126, <IFH> line 3.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA038_N_G1T_Cp6_20170719_143214/TN/RDCSVA038_N_G1T_Cp6_20170719_143214_TN.msi.txt'
+diff: Try `diff --help' for more information.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 131, <IFH> line 3.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA038_N_G1T_Cp6_20170719_143214/TN/RDCSVA038_N_G1T_Cp6_20170719_143214_TN.msi.txt'
+diff: Try `diff --help' for more information.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 137, <IFH> line 3.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA038_N_G1T_Cp6_20170719_143214/TN/RDCSVA038_N_G1T_Cp6_20170719_143214_TN.msi.txt'
+diff: Try `diff --help' for more information.
+Comparing a pgdx_somatics-cancerselect-somatics-5.3.0b6 run with cancerselect-somatics-5.3.0b11 run
+Comparing Tumor Fraction of 0.4 with 0.4
+Creating Output Directory: /mnt/user_data/astangl/compareChanges/compareChanges_somatic/Results_CompareChanges/RDCSVA046_N_T_Cp6_20170719_1434413
+
+Time Elapsed: 0 seconds
+Program has completed please check the output directory: /mnt/user_data/astangl/compareChanges/compareChanges_somatic/Results_CompareChanges/RDCSVA046_N_T_Cp6_20170719_1434413
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 125, <IFH> line 4.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 126, <IFH> line 4.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA046_N_T_Cp6_20170719_143441/TN/RDCSVA046_N_T_Cp6_20170719_143441_TN.msi.txt'
+diff: Try `diff --help' for more information.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 131, <IFH> line 4.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA046_N_T_Cp6_20170719_143441/TN/RDCSVA046_N_T_Cp6_20170719_143441_TN.msi.txt'
+diff: Try `diff --help' for more information.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 137, <IFH> line 4.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA046_N_T_Cp6_20170719_143441/TN/RDCSVA046_N_T_Cp6_20170719_143441_TN.msi.txt'
+diff: Try `diff --help' for more information.
+Comparing a pgdx_somatics-cancerselect-somatics-5.3.0b6 run with cancerselect-somatics-5.3.0b11 run
+Comparing Tumor Fraction of 0.1 with 0.1
+Creating Output Directory: /mnt/user_data/astangl/compareChanges/compareChanges_somatic/Results_CompareChanges/RDCSVA055_N_T_Cp6_20170719_1435314
+
+Time Elapsed: 0 seconds
+Program has completed please check the output directory: /mnt/user_data/astangl/compareChanges/compareChanges_somatic/Results_CompareChanges/RDCSVA055_N_T_Cp6_20170719_1435314
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 125, <IFH> line 5.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 126, <IFH> line 5.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA055_N_T_Cp6_20170719_143531/TN/RDCSVA055_N_T_Cp6_20170719_143531_TN.msi.txt'
+diff: Try `diff --help' for more information.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 131, <IFH> line 5.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA055_N_T_Cp6_20170719_143531/TN/RDCSVA055_N_T_Cp6_20170719_143531_TN.msi.txt'
+diff: Try `diff --help' for more information.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 137, <IFH> line 5.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA055_N_T_Cp6_20170719_143531/TN/RDCSVA055_N_T_Cp6_20170719_143531_TN.msi.txt'
+diff: Try `diff --help' for more information.
+Comparing a pgdx_somatics-cancerselect-somatics-5.3.0b6 run with cancerselect-somatics-5.3.0b11 run
+Comparing Tumor Fraction of 0.4 with 0.4
+Creating Output Directory: /mnt/user_data/astangl/compareChanges/compareChanges_somatic/Results_CompareChanges/RDCSVA056_N_T_Cp6_20170719_1436475
+
+Time Elapsed: 1 seconds
+Program has completed please check the output directory: /mnt/user_data/astangl/compareChanges/compareChanges_somatic/Results_CompareChanges/RDCSVA056_N_T_Cp6_20170719_1436475
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 125, <IFH> line 6.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 126, <IFH> line 6.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA056_N_T_Cp6_20170719_143647/TN/RDCSVA056_N_T_Cp6_20170719_143647_TN.msi.txt'
+diff: Try `diff --help' for more information.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 131, <IFH> line 6.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA056_N_T_Cp6_20170719_143647/TN/RDCSVA056_N_T_Cp6_20170719_143647_TN.msi.txt'
+diff: Try `diff --help' for more information.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 137, <IFH> line 6.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA056_N_T_Cp6_20170719_143647/TN/RDCSVA056_N_T_Cp6_20170719_143647_TN.msi.txt'
+diff: Try `diff --help' for more information.
+Comparing a pgdx_somatics-cancerselect-somatics-5.3.0b6 run with cancerselect-somatics-5.3.0b11 run
+Comparing Tumor Fraction of 0.5 with 0.5
+Creating Output Directory: /mnt/user_data/astangl/compareChanges/compareChanges_somatic/Results_CompareChanges/RDCSVA083_N_T_Cp6_20170719_1437516
+
+Time Elapsed: 0 seconds
+Program has completed please check the output directory: /mnt/user_data/astangl/compareChanges/compareChanges_somatic/Results_CompareChanges/RDCSVA083_N_T_Cp6_20170719_1437516
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 125, <IFH> line 7.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 126, <IFH> line 7.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA083_N_T_Cp6_20170719_143751/TN/RDCSVA083_N_T_Cp6_20170719_143751_TN.msi.txt'
+diff: Try `diff --help' for more information.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 131, <IFH> line 7.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA083_N_T_Cp6_20170719_143751/TN/RDCSVA083_N_T_Cp6_20170719_143751_TN.msi.txt'
+diff: Try `diff --help' for more information.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 137, <IFH> line 7.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA083_N_T_Cp6_20170719_143751/TN/RDCSVA083_N_T_Cp6_20170719_143751_TN.msi.txt'
+diff: Try `diff --help' for more information.
+Cannot open /data28-pgdx-pod14/Testing/RDCSVA030T_Cp6_eland_MSI_050317/pipeline/RDCSVA030T_Cp6_eland_MSI_050317.pipeline.config No such file or directory
+Use of uninitialized value $oldfile in concatenation (.) or string at compare_wrapper_Somatics.pl line 81, <IFH> line 8.
+Use of uninitialized value $oldfile in concatenation (.) or string at compare_wrapper_Somatics.pl line 86, <IFH> line 8.
+Use of uninitialized value $oldfile in concatenation (.) or string at compare_wrapper_Somatics.pl line 91, <IFH> line 8.
+Traceback (most recent call last):
+  File "/mnt/user_data/astangl/compareChanges/compareChanges_somatic/coverage_comp.py", line 533, in <module>
+    sys.exit(main())
+  File "/mnt/user_data/astangl/compareChanges/compareChanges_somatic/coverage_comp.py", line 497, in main
+    args.old_file = locate_summary(args.old_file)
+  File "/mnt/user_data/astangl/compareChanges/compareChanges_somatic/coverage_comp.py", line 36, in locate_summary
+    files = os.listdir(inpath)
+OSError: [Errno 2] No such file or directory: '/data28-pgdx-pod14/Testing/RDCSVA030T_Cp6_eland_MSI_050317'
+Use of uninitialized value $old_rear[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 154, <IFH> line 8.
+Use of uninitialized value $old_rear[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 155, <IFH> line 8.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA030_N_T_Cp6_20170720_085329/pare/RDCSVA030_N_T_Cp6_20170720_085329.Rearrangements.txt'
+diff: Try `diff --help' for more information.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 125, <IFH> line 8.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 126, <IFH> line 8.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA030_N_T_Cp6_20170720_085329/TN/RDCSVA030_N_T_Cp6_20170720_085329_TN.msi.txt'
+diff: Try `diff --help' for more information.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 131, <IFH> line 8.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA030_N_T_Cp6_20170720_085329/TN/RDCSVA030_N_T_Cp6_20170720_085329_TN.msi.txt'
+diff: Try `diff --help' for more information.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 137, <IFH> line 8.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA030_N_T_Cp6_20170720_085329/TN/RDCSVA030_N_T_Cp6_20170720_085329_TN.msi.txt'
+diff: Try `diff --help' for more information.
+Cannot open /data28-pgdx-pod14/Testing/RDCSVA040T_G1_Cp6_eland_MSI_050317/pipeline/RDCSVA040T_G1_Cp6_eland_MSI_050317.pipeline.config No such file or directory
+Use of uninitialized value $oldfile in concatenation (.) or string at compare_wrapper_Somatics.pl line 81, <IFH> line 9.
+Use of uninitialized value $oldfile in concatenation (.) or string at compare_wrapper_Somatics.pl line 86, <IFH> line 9.
+Use of uninitialized value $oldfile in concatenation (.) or string at compare_wrapper_Somatics.pl line 91, <IFH> line 9.
+Traceback (most recent call last):
+  File "/mnt/user_data/astangl/compareChanges/compareChanges_somatic/coverage_comp.py", line 533, in <module>
+    sys.exit(main())
+  File "/mnt/user_data/astangl/compareChanges/compareChanges_somatic/coverage_comp.py", line 497, in main
+    args.old_file = locate_summary(args.old_file)
+  File "/mnt/user_data/astangl/compareChanges/compareChanges_somatic/coverage_comp.py", line 36, in locate_summary
+    files = os.listdir(inpath)
+OSError: [Errno 2] No such file or directory: '/data28-pgdx-pod14/Testing/RDCSVA040T_G1_Cp6_eland_MSI_050317'
+Use of uninitialized value $old_rear[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 154, <IFH> line 9.
+Use of uninitialized value $old_rear[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 155, <IFH> line 9.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA040_N_G1T_Cp6_20170720_091546/pare/RDCSVA040_N_G1T_Cp6_20170720_091546.Rearrangements.txt'
+diff: Try `diff --help' for more information.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 125, <IFH> line 9.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 126, <IFH> line 9.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA040_N_G1T_Cp6_20170720_091546/TN/RDCSVA040_N_G1T_Cp6_20170720_091546_TN.msi.txt'
+diff: Try `diff --help' for more information.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 131, <IFH> line 9.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA040_N_G1T_Cp6_20170720_091546/TN/RDCSVA040_N_G1T_Cp6_20170720_091546_TN.msi.txt'
+diff: Try `diff --help' for more information.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 137, <IFH> line 9.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA040_N_G1T_Cp6_20170720_091546/TN/RDCSVA040_N_G1T_Cp6_20170720_091546_TN.msi.txt'
+diff: Try `diff --help' for more information.
+Cannot open /data28-pgdx-pod14/Testing/RDCSVA002T_S2_Cp6_RR1_eland_MSI_050317/pipeline/RDCSVA002T_S2_Cp6_RR1_eland_MSI_050317.pipeline.config No such file or directory
+Use of uninitialized value $oldfile in concatenation (.) or string at compare_wrapper_Somatics.pl line 81, <IFH> line 10.
+Use of uninitialized value $oldfile in concatenation (.) or string at compare_wrapper_Somatics.pl line 86, <IFH> line 10.
+Use of uninitialized value $oldfile in concatenation (.) or string at compare_wrapper_Somatics.pl line 91, <IFH> line 10.
+Traceback (most recent call last):
+  File "/mnt/user_data/astangl/compareChanges/compareChanges_somatic/coverage_comp.py", line 533, in <module>
+    sys.exit(main())
+  File "/mnt/user_data/astangl/compareChanges/compareChanges_somatic/coverage_comp.py", line 497, in main
+    args.old_file = locate_summary(args.old_file)
+  File "/mnt/user_data/astangl/compareChanges/compareChanges_somatic/coverage_comp.py", line 36, in locate_summary
+    files = os.listdir(inpath)
+OSError: [Errno 2] No such file or directory: '/data28-pgdx-pod14/Testing/RDCSVA002T_S2_Cp6_RR1_eland_MSI_050317'
+Use of uninitialized value $old_rear[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 154, <IFH> line 10.
+Use of uninitialized value $old_rear[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 155, <IFH> line 10.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA002_N_S2T_Cp6_20170720_091958/pare/RDCSVA002_N_S2T_Cp6_20170720_091958.Rearrangements.txt'
+diff: Try `diff --help' for more information.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 125, <IFH> line 10.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 126, <IFH> line 10.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA002_N_S2T_Cp6_20170720_091958/TN/RDCSVA002_N_S2T_Cp6_20170720_091958_TN.msi.txt'
+diff: Try `diff --help' for more information.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 131, <IFH> line 10.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA002_N_S2T_Cp6_20170720_091958/TN/RDCSVA002_N_S2T_Cp6_20170720_091958_TN.msi.txt'
+diff: Try `diff --help' for more information.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 137, <IFH> line 10.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA002_N_S2T_Cp6_20170720_091958/TN/RDCSVA002_N_S2T_Cp6_20170720_091958_TN.msi.txt'
+diff: Try `diff --help' for more information.
+Cannot open /data28-pgdx-pod14/Testing/RDCSVA014T_Cp6_eland_MSI_050317/pipeline/RDCSVA014T_Cp6_eland_MSI_050317.pipeline.config No such file or directory
+Use of uninitialized value $oldfile in concatenation (.) or string at compare_wrapper_Somatics.pl line 81, <IFH> line 11.
+Use of uninitialized value $oldfile in concatenation (.) or string at compare_wrapper_Somatics.pl line 86, <IFH> line 11.
+Use of uninitialized value $oldfile in concatenation (.) or string at compare_wrapper_Somatics.pl line 91, <IFH> line 11.
+Traceback (most recent call last):
+  File "/mnt/user_data/astangl/compareChanges/compareChanges_somatic/coverage_comp.py", line 533, in <module>
+    sys.exit(main())
+  File "/mnt/user_data/astangl/compareChanges/compareChanges_somatic/coverage_comp.py", line 497, in main
+    args.old_file = locate_summary(args.old_file)
+  File "/mnt/user_data/astangl/compareChanges/compareChanges_somatic/coverage_comp.py", line 36, in locate_summary
+    files = os.listdir(inpath)
+OSError: [Errno 2] No such file or directory: '/data28-pgdx-pod14/Testing/RDCSVA014T_Cp6_eland_MSI_050317'
+Use of uninitialized value $old_rear[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 154, <IFH> line 11.
+Use of uninitialized value $old_rear[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 155, <IFH> line 11.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA014_N_T_Cp6_20170720_110451/pare/RDCSVA014_N_T_Cp6_20170720_110451.Rearrangements.txt'
+diff: Try `diff --help' for more information.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 125, <IFH> line 11.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 126, <IFH> line 11.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA014_N_T_Cp6_20170720_110451/TN/RDCSVA014_N_T_Cp6_20170720_110451_TN.msi.txt'
+diff: Try `diff --help' for more information.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 131, <IFH> line 11.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA014_N_T_Cp6_20170720_110451/TN/RDCSVA014_N_T_Cp6_20170720_110451_TN.msi.txt'
+diff: Try `diff --help' for more information.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 137, <IFH> line 11.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA014_N_T_Cp6_20170720_110451/TN/RDCSVA014_N_T_Cp6_20170720_110451_TN.msi.txt'
+diff: Try `diff --help' for more information.
+Cannot open /data28-pgdx-pod14/Testing/RDCSVA076T_Cp6_eland_MSI_050317/pipeline/RDCSVA076T_Cp6_eland_MSI_050317.pipeline.config No such file or directory
+Use of uninitialized value $oldfile in concatenation (.) or string at compare_wrapper_Somatics.pl line 81, <IFH> line 12.
+Use of uninitialized value $oldfile in concatenation (.) or string at compare_wrapper_Somatics.pl line 86, <IFH> line 12.
+Use of uninitialized value $oldfile in concatenation (.) or string at compare_wrapper_Somatics.pl line 91, <IFH> line 12.
+Traceback (most recent call last):
+  File "/mnt/user_data/astangl/compareChanges/compareChanges_somatic/coverage_comp.py", line 533, in <module>
+    sys.exit(main())
+  File "/mnt/user_data/astangl/compareChanges/compareChanges_somatic/coverage_comp.py", line 497, in main
+    args.old_file = locate_summary(args.old_file)
+  File "/mnt/user_data/astangl/compareChanges/compareChanges_somatic/coverage_comp.py", line 36, in locate_summary
+    files = os.listdir(inpath)
+OSError: [Errno 2] No such file or directory: '/data28-pgdx-pod14/Testing/RDCSVA076T_Cp6_eland_MSI_050317'
+Use of uninitialized value $old_rear[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 154, <IFH> line 12.
+Use of uninitialized value $old_rear[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 155, <IFH> line 12.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA076_N_T_Cp6_20170720_110633/pare/RDCSVA076_N_T_Cp6_20170720_110633.Rearrangements.txt'
+diff: Try `diff --help' for more information.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 125, <IFH> line 12.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 126, <IFH> line 12.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA076_N_T_Cp6_20170720_110633/TN/RDCSVA076_N_T_Cp6_20170720_110633_TN.msi.txt'
+diff: Try `diff --help' for more information.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 131, <IFH> line 12.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA076_N_T_Cp6_20170720_110633/TN/RDCSVA076_N_T_Cp6_20170720_110633_TN.msi.txt'
+diff: Try `diff --help' for more information.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 137, <IFH> line 12.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA076_N_T_Cp6_20170720_110633/TN/RDCSVA076_N_T_Cp6_20170720_110633_TN.msi.txt'
+diff: Try `diff --help' for more information.
+Cannot open /data28-pgdx-pod14/Testing/RDCSVA078T_Cp6_eland_MSI_050317/pipeline/RDCSVA078T_Cp6_eland_MSI_050317.pipeline.config No such file or directory
+Use of uninitialized value $oldfile in concatenation (.) or string at compare_wrapper_Somatics.pl line 81, <IFH> line 13.
+Use of uninitialized value $oldfile in concatenation (.) or string at compare_wrapper_Somatics.pl line 86, <IFH> line 13.
+Use of uninitialized value $oldfile in concatenation (.) or string at compare_wrapper_Somatics.pl line 91, <IFH> line 13.
+Traceback (most recent call last):
+  File "/mnt/user_data/astangl/compareChanges/compareChanges_somatic/coverage_comp.py", line 533, in <module>
+    sys.exit(main())
+  File "/mnt/user_data/astangl/compareChanges/compareChanges_somatic/coverage_comp.py", line 497, in main
+    args.old_file = locate_summary(args.old_file)
+  File "/mnt/user_data/astangl/compareChanges/compareChanges_somatic/coverage_comp.py", line 36, in locate_summary
+    files = os.listdir(inpath)
+OSError: [Errno 2] No such file or directory: '/data28-pgdx-pod14/Testing/RDCSVA078T_Cp6_eland_MSI_050317'
+Use of uninitialized value $old_rear[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 154, <IFH> line 13.
+Use of uninitialized value $old_rear[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 155, <IFH> line 13.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA078_N_T_Cp6_20170720_110810/pare/RDCSVA078_N_T_Cp6_20170720_110810.Rearrangements.txt'
+diff: Try `diff --help' for more information.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 125, <IFH> line 13.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 126, <IFH> line 13.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA078_N_T_Cp6_20170720_110810/TN/RDCSVA078_N_T_Cp6_20170720_110810_TN.msi.txt'
+diff: Try `diff --help' for more information.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 131, <IFH> line 13.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA078_N_T_Cp6_20170720_110810/TN/RDCSVA078_N_T_Cp6_20170720_110810_TN.msi.txt'
+diff: Try `diff --help' for more information.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 137, <IFH> line 13.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA078_N_T_Cp6_20170720_110810/TN/RDCSVA078_N_T_Cp6_20170720_110810_TN.msi.txt'
+diff: Try `diff --help' for more information.
+Cannot open /data28-pgdx-pod14/Testing/RDCSVA067T_S1_Cp6_eland_MSI_050317/pipeline/RDCSVA067T_S1_Cp6_eland_MSI_050317.pipeline.config No such file or directory
+Use of uninitialized value $oldfile in concatenation (.) or string at compare_wrapper_Somatics.pl line 81, <IFH> line 14.
+Use of uninitialized value $oldfile in concatenation (.) or string at compare_wrapper_Somatics.pl line 86, <IFH> line 14.
+Use of uninitialized value $oldfile in concatenation (.) or string at compare_wrapper_Somatics.pl line 91, <IFH> line 14.
+Traceback (most recent call last):
+  File "/mnt/user_data/astangl/compareChanges/compareChanges_somatic/coverage_comp.py", line 533, in <module>
+    sys.exit(main())
+  File "/mnt/user_data/astangl/compareChanges/compareChanges_somatic/coverage_comp.py", line 497, in main
+    args.old_file = locate_summary(args.old_file)
+  File "/mnt/user_data/astangl/compareChanges/compareChanges_somatic/coverage_comp.py", line 36, in locate_summary
+    files = os.listdir(inpath)
+OSError: [Errno 2] No such file or directory: '/data28-pgdx-pod14/Testing/RDCSVA067T_S1_Cp6_eland_MSI_050317'
+Use of uninitialized value $old_rear[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 154, <IFH> line 14.
+Use of uninitialized value $old_rear[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 155, <IFH> line 14.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA067_N_S1T_Cp6_20170720_113033/pare/RDCSVA067_N_S1T_Cp6_20170720_113033.Rearrangements.txt'
+diff: Try `diff --help' for more information.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 125, <IFH> line 14.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 126, <IFH> line 14.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA067_N_S1T_Cp6_20170720_113033/TN/RDCSVA067_N_S1T_Cp6_20170720_113033_TN.msi.txt'
+diff: Try `diff --help' for more information.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 131, <IFH> line 14.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA067_N_S1T_Cp6_20170720_113033/TN/RDCSVA067_N_S1T_Cp6_20170720_113033_TN.msi.txt'
+diff: Try `diff --help' for more information.
+Use of uninitialized value $old_msi[0] in concatenation (.) or string at compare_wrapper_Somatics.pl line 137, <IFH> line 14.
+diff: missing operand after `/data28-pgdx-pod14/Testing/RDCSVA067_N_S1T_Cp6_20170720_113033/TN/RDCSVA067_N_S1T_Cp6_20170720_113033_TN.msi.txt'
+diff: Try `diff --help' for more information.

@@ -1,0 +1,459 @@
+#!/usr/bin/perl
+
+=head1 NAME 
+
+compareChanges
+
+=head1 USAGE
+
+compareChanges
+
+=head1 OPTIONS
+B<--ignorecols>
+	Comma separated list of columns to not report differences in. Handy for ID cols. Will still check for presence of col.
+
+B<--debug> 
+	<int> The debug level, default is 0 for no debugging.
+
+B<--help,-h> 
+	This help message and documentation.
+
+=head1 DESCRIPTION
+
+=head1 COPYRIGHT
+
+Personal Genome Diagnostics, 2012. All rights reserved.
+
+=cut
+
+use strict;
+use POSIX;
+use File::Basename;
+use Getopt::Long qw(:config no_ignore_case no_auto_abbrev);
+use Pod::Usage;
+use lib dirname (__FILE__);
+use PGDX;
+
+$|=1;
+
+my @multiname; #Allows for --name name1 --name name2
+my %options;
+
+GetOptions (\%options,
+		'debug=s',
+		'oldfile:s',
+		'newfile:s',
+		'oldbase:s',
+		'newbase:s',
+		'suffixes=s',
+		'printall',
+		'summaryfile=s',
+		'printsummary',
+		'outdir=s',
+		'uniqcol=s',
+		'ignorecols=s',
+	'oldversion=s',
+	'newversion=s',
+		'help|h') || pod2usage();
+
+# Show help
+if( $options{'help'}){  
+	pod2usage( {-exitval=>1, -verbose => 1, -output => \*STDOUT} );
+}
+
+my %ignorecols = ();
+map { $ignorecols{$_}=1 } split(",",$options{'ignorecols'}) if( exists( $options{'ignorecols'} ) );
+
+my $uniqcol = $options{uniqcol} ? $options{uniqcol} : 'ChangeUID';
+
+my $chunk = 100000;
+
+
+my ($file1_headers, $file1_changes);
+my ($file2_headers, $file2_changes);
+
+my $changes1 = [];
+my $changes2 = [];
+
+my $col_diffs = {};
+my $comp_cols={};
+my $cell_diffs =0;
+my $comp_cells=0;
+my $outdir =$options{outdir};
+
+my $summaryfile = "$outdir/$options{summaryfile}";
+
+if($options{oldbase} && $options{newbase}) {
+
+	if(!$outdir) {
+		$outdir = dirname $options{newbase};
+		print STDERR "OUTPUT DIRECTORY: $outdir\n";
+	}
+	if(!$options{summaryfile}) {
+		$summaryfile = "$outdir/comparison_summary.txt";
+	}
+	print STDERR "$summaryfile\n";
+	my @suff = split(',',$options{suffixes});
+	
+	foreach my $s (@suff) {
+		my $newfile="$options{newbase}$s";
+		my $oldfile="$options{oldbase}$s";
+		$options{oldbase} =~ /(.*)\/([^\/]+)$/;
+		my $old_parent = $1;
+		my $old_bname = $2;
+		$options{newbase} =~ /(.*)\/([^\/]+)$/;
+		my $new_parent = $1;
+		my $new_bname = $2;
+		print STDERR "$new_parent/misc/$new_bname$s\t$old_parent/misc/$old_bname$s\n";
+		print STDERR "$newfile $oldfile\n";
+		if(-e $newfile && -e $oldfile) {
+			&process_pair_chunked($oldfile,$newfile);
+		}
+		elsif(-e $newfile && -e "$old_parent/misc/$old_bname$s") {
+			&process_pair_chunked("$old_parent/misc/$old_bname$s",$newfile);
+		}
+		elsif(-e "$new_parent/misc/$new_bname$s" && -e $oldfile) {
+			&process_pair_chunked($oldfile,"$new_parent/misc/$new_bname$s");
+		}
+		elsif(-e "$new_parent/misc/$new_bname$s" && -e "$old_parent/misc/$old_bname$s") {
+			&process_pair_chunked("$old_parent/misc/$old_bname$s","$new_parent/misc/$new_bname$s");
+		}
+	}
+}
+elsif($options{oldfile} && $options{newfile}) {
+	if(!$outdir) {
+		$outdir = dirname $options{newfile};
+	}
+	if(!$options{summaryfile}) {
+		$summaryfile = "$outdir/comparison_summary.txt";
+	}
+	&process_pair_chunked($options{oldfile},$options{newfile});
+}
+
+else {
+	print STDERR "Need an oldbase/newbase/suffix or oldfile/newfile\n";
+	exit;
+}
+
+
+
+# Takes a pair of files. 
+sub process_pair_chunked {
+	
+	my ($oldfile,$newfile) = @_;
+
+#	($file1_headers, $file1_changes) = &get_changes($newfile);
+#	($file2_headers, $file2_changes) = &get_changes($oldfile);
+
+
+	$changes1 = [];
+	$changes2 = [];
+	$col_diffs = {};
+	$comp_cols={};
+	$cell_diffs =0;
+	$comp_cells=0;
+		
+	my ($newbase,$newdir,$newsuff) = fileparse($newfile,qr/\.[^.]*$/);
+	my ($oldbase,$olddir,$oldsuff) = fileparse($oldfile,qr/\.[^.]*$/);
+	
+	my $diff_file = "$newbase.comparison.txt";
+	if($options{printall}) { 
+		$diff_file = "$newbase.comparison.full.txt";
+	}
+
+
+	my $headernew = &get_header($newfile);
+	my $headerold = &get_header($oldfile);
+	my ($columns_gained,$columns_lost) = &columns_gained_lost($headerold, $headernew);
+
+	print STDERR "DEBUG: $columns_gained\n";
+
+
+	print `mkdir -p "$outdir/diffs/"`;
+	print STDERR "Printing to $outdir/diffs/$diff_file\n";
+	open my $outfh, ">$outdir/diffs/$diff_file" or do {print STDERR "Couldn't open diff file $outdir/diffs/$diff_file\n"; exit 0;};
+
+
+	my $oldhlookup = &PGDX::getChangesHeaderIndex({
+		changes => $oldfile,
+		headers => $headerold
+#		headers => [$uniqcol]
+		});
+
+	&determine_outcols($outfh,$headernew,$oldhlookup);
+
+	print STDERR "About to compare files\n";
+	my $changes_gained = &compare_file_pair($newfile,$oldfile,$outfh,$headernew,$headerold);
+	my $changes_lost = &compare_file_pair($oldfile,$newfile,0,$headerold,$headernew);
+	
+	my $num_gained = scalar @$changes_gained;
+	my $num_lost = scalar @$changes_lost;
+
+	# Print the changes gained/lost
+	&print_gained_lost($outfh,$changes_gained,$changes_lost,$headernew,$headerold);
+	
+	# move the diffs file if they are identical
+	if($cell_diffs == 0 && $num_gained == 0 && $num_lost == 0) {
+		print `mkdir -p "$outdir/same"`;
+		print `mv -f "$outdir/diffs/$diff_file" "$outdir/same"`;
+	}
+ 
+	if($options{summaryfile} || $options{printsummary}) {
+		my $print_header =0;
+		if(! -e $summaryfile) {
+			$print_header=1;
+		}
+		open OUT, ">>$summaryfile" or do {print STDERR "Couldn't append to $summaryfile"; exit 0;};
+		if($print_header) {
+		print OUT join("\t",('Old Version:',$options{oldversion},'New Version',$options{newversion}));
+		print OUT "\n";
+			print OUT join("\t",('Old File','New File','#Muts Gained', '#Muts Lost','Total #Cells Compared','#Different Cells','Total #Columns Compared','#Columns with Differing Values','Columnns with Differing Values','Columns Gained','Columns Lost'));
+			print OUT "\n";
+		}
+		print OUT join("\t",($oldfile,$newfile,$num_gained,$num_lost,$comp_cells,$cell_diffs,(scalar keys %$comp_cols),(scalar keys %$col_diffs),join(',',keys %$col_diffs),$columns_gained,$columns_lost));
+		print OUT "\n";
+		close OUT;
+	}
+}
+
+
+# Reads file 1 in chunks into memory
+# For each chunk, goes through file 2 to see if changes in file1 are present.
+sub compare_file_pair {
+	my ($file1,$file2,$outfh,$header1,$header2) = @_;
+	
+	# Read the next chunk of the file handle for the new file
+	open my $file1fh, "<$file1" or die "Unable to open $file1";
+	
+	my $f1h = <$file1fh>; # Throw out the header
+	
+	my $file1extras = [];
+	
+	# Get the header lookup for the old file
+	my $file2hlookup = &PGDX::getChangesHeaderIndex({
+		changes => $file2,
+		headers => $header2
+		});
+	
+	my $file1hlookup = &PGDX::getChangesHeaderIndex({
+		changes => $file1,
+		headers => $header1
+	});
+	
+	my $getchange = 1;#($outfh) ? 1 : 0;
+	($file1_headers, $file1_changes) = &get_changes_fh($file1, $file1fh, $file1hlookup, $header1, $chunk,$getchange);
+	# Looking for things in file 1 that are in file 2
+	while(keys %$file1_changes) {
+
+		print STDERR "Reading through $file1\n";
+
+		open my $file2fh, "<$file2" or die "Unable to open $file2\n";
+		my $h = <$file2fh>; # Throw out the header
+		while ((my $line = <$file2fh>) && keys %$file1_changes) {
+			# Determine what columns are comparable.
+			my @values = split(/\t/,$line);
+			my $file2cuid = $values[$file2hlookup->{$uniqcol}];
+
+			if($file2cuid && $file1_changes->{$file2cuid}) {
+				if($outfh) {
+					my $file2_change = &get_change(\@values,$header2);			
+					&compare_columns($file1_changes->{$file2cuid},$file2_change,$outfh);
+				}
+				delete $file1_changes->{$file2cuid};
+			}
+		}
+		foreach my $key (keys %$file1_changes) {
+			push(@$file1extras, $file1_changes->{$key});
+		}
+		
+		($file1_headers, $file1_changes) = &get_changes_fh($file1, $file1fh, $file1hlookup, $header1, $chunk,$getchange)
+		
+	}
+
+	return $file1extras;
+}
+
+# Get the header row from a file
+sub get_header {
+	my $file = shift;
+	
+	open IN, "<$file" or do { print STDERR "Couldn't open $file\n"; exit 0;};
+	my $h = <IN>;
+	chomp $h;
+	my @h = split(/\t/,$h);
+	
+	return \@h
+}
+
+# Print out the gained and lost
+sub print_gained_lost {
+	my ($outfh,$gained,$lost,$gainedheader,$lostheader) = @_;
+
+	my $num_gained =scalar @$gained;
+	print $outfh "Changes Gained (In new file but not in old):\n";
+	print $outfh join("\t",@$gainedheader);
+	print $outfh "\n";
+	foreach my $change (@$gained) {
+		my @l;
+		foreach my $h (@$gainedheader) {
+			push(@l, $change->{$h});
+		}
+		##SSHAH- HERE IS WHERE YOU CAN GET THE CUID TO DO THE SEARCH FOR WHERE IT WAS FILTERED OUT
+		print $outfh join("\t",@l);
+		print $outfh "\n";
+	}
+
+	my $num_lost = scalar @$lost;
+	print $outfh "Changes Lost (In old file but not in new):\n";
+	print $outfh join("\t",@$lostheader);
+	print $outfh "\n";
+	foreach my $change (@$lost) {
+		my @l;
+		foreach my $h (@$lostheader) {
+			push(@l, $change->{$h});
+		}
+		print $outfh join("\t",@l);
+		print $outfh "\n";
+	}
+}
+
+sub determine_outcols {
+
+	my ($outfh,$newheaders,$oldlookup) = @_;
+
+	my @outcols;
+	
+	# Loop through all the new header keys
+	foreach my $h (@$newheaders) {
+	
+		# If the header is present in the old file, push it on with the 'old' header
+		if(exists $oldlookup->{$h}) {
+			push(@outcols, ($h,"$h (old file)"));
+		}
+		else { push(@outcols, ($h)); }
+	}
+	print $outfh join("\t",@outcols);
+	print $outfh "\n";
+	
+	return \@outcols;
+}
+
+
+sub compare_columns {
+	my ($f1_change,$f2_change,$fh) = @_;
+	
+	my @outcols;
+	foreach my $h (@$file1_headers) {
+	
+		# Adding changeuid
+		if($h eq $uniqcol) {
+			push(@outcols,($f1_change->{$h},$f2_change->{$h}));
+		}
+		else {
+			# If the header exists in file 2 then print 2 columns with the new/old value
+			if(exists($f2_change->{$h})) {
+				$comp_cols->{$h}=1;
+				$comp_cells++;
+				( my $f1_col = join(",",sort split(",",$f1_change->{$h})) ) =~ s/^\s+|\s+$//g;
+				( my $f2_col = join(",",sort split(",",$f2_change->{$h})) ) =~ s/^\s+|\s+$//g;
+				if($f1_col ne $f2_col && !exists( $ignorecols{$h} ) ) {
+					push(@outcols,($f1_change->{$h},$f2_change->{$h}));
+					$col_diffs->{$h}=1;
+					$cell_diffs++;
+				}
+				else { 
+					if($options{printall}) {
+						push(@outcols,($f1_change->{$h},$f2_change->{$h}));
+					}
+					else {
+						push(@outcols,('',''));
+					}
+				}
+			}
+			else { push(@outcols,$f1_change->{$h}); }
+		}
+	}
+	print $fh join("\t",@outcols);
+	print $fh "\n";
+}
+
+sub get_changes_fh {
+	my ($file, $filehandle, $hlookup, $headers, $chunk,$getchange) = @_;
+	my $changes = {};
+
+	my $cindex = $hlookup->{$uniqcol};
+	my $count = 0;
+	my $line;
+	print STDERR "About to read $chunk lines\n";
+	while($count < $chunk && ($line = <$filehandle>)) {
+		chomp $line;
+		my @f = split(/\t/,$line);
+		if($getchange) {
+			$changes->{$f[$cindex]} = &get_change(\@f,$headers);
+		}
+		else {
+			$changes->{$f[$cindex]} = 1;
+		}
+		$count ++;
+	}
+	print STDERR "Read $count lines\n";
+	return ($headers,$changes);
+}
+
+# Take a row from a changes sheet and return an object
+sub get_change {
+	my $row = shift;
+	my $headers = shift;
+
+	my $change = {};	
+	for(my $i = 0;$i<@$headers;$i++) {
+		$change->{$headers->[$i]} = $row->[$i];
+	}
+	return $change;
+}
+
+sub get_changes {
+	my $file = shift;
+	my $changes = {};
+open IN, "<$file" or do { print STDERR "Couldn't open $file\n"; exit 0;};
+my $hlookup = &PGDX::getChangesHeaderIndex({
+	changes => $file,
+	headers => [$uniqcol]
+	});
+my $h = <IN>;
+chomp $h;
+my @h = split(/\t/,$h);
+my $cindex = $hlookup->{$uniqcol};
+while(<IN>) {
+	chomp;
+	my @f = split(/\t/);
+	$changes->{$f[$cindex]} = {};
+	for(my $i = 0;$i<@h;$i++) {
+		$changes->{$f[$cindex]}->{$h[$i]} = $f[$i];
+	}
+}
+
+	return (\@h,$changes);
+}
+
+##SSHAH-This subroutine compares the headers of each file so that we know which columns were gained/lost
+#Could use Array:Utils but it's not standard. Not worth maintaining
+#Takes in the references to the header arrays
+sub columns_gained_lost{
+	my @columns_old_array = @{shift()};
+	my @columns_new_array = @{shift()};
+	
+	my %tmp_gained  = map  { $_ => 1 } @columns_old_array;
+	my @gained_array = grep { not exists $tmp_gained{$_} } @columns_new_array;   
+	my $gained = join(', ',@gained_array);
+
+	my %tmp_lost  = map  { $_ => 1 } @columns_new_array;
+	my @lost_array = grep { not exists $tmp_lost{$_} } @columns_old_array;
+	my $lost = join(', ',@lost_array);
+
+	print "$lost\n"; 
+	return ($gained,$lost);
+
+}
+
+
