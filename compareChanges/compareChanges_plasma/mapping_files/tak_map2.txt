@@ -1,0 +1,14 @@
+HASH_KEY_LOOKUP	takeda-crc-plasma-4.0.0b1	takeda-crc-plamsa-4.1.0b8
+ALL_CHANGES	{location}/{Sample_Name}/{Sample_Name}.allchanges.txt	{location}/{Sample_Name}/{Sample_Name}.allchanges.txt	{location}/{Sample_Name}/{Sample_Name}.all
+REG_SUMMARYSHEET	{location}/{Sample_Name}.summarysheet.txt	{location}/{Sample_Name}.summarysheet.txt
+PLASMA_CHANGES	{location}/{Run_Name}.PlasmaChanges.txt	{location}/{Run_Name}.PlasmaChanges.txt
+LOH	{location}/{Sample_Name}/{Sample_Name}.loh.txt	{location}/{Sample_Name}/{Sample_Name}.loh.txt
+POSTBLATHG19CHANGES	{location}/{Sample_Name}/{Sample_Name}.PostBLAThg19Changes.txt	{location}/{Sample_Name}/{Sample_Name}.PostBLAThg19Changes.txt
+POSTBLATHG19CHASMCHANGES	{location}/{Sample_Name}/{Sample_Name}.PostBLAThg19ChasmChanges.txt	{location}/{Sample_Name}/{Sample_Name}.PostBLAThg19ChasmChanges.txt
+POSTBLATHG19VIEWER	{location}/{Sample_Name}/{Sample_Name}.PostBLAThg19.viewer.txt	{location}/{Sample_Name}/{Sample_Name}.PostBLAThg19.viewer.txt
+REVLOH	{location}/{Sample_Name}/{Sample_Name}.revloh.txt	{location}/{Sample_Name}/{Sample_Name}.revloh.txt
+SNPCHECK_SUMMARY	{location}/{Sample_Name}/{Sample_Name}.snpcheck_summary.txt	{location}/{Sample_Name}/{Sample_Name}.snpcheck_summary.txt
+SNPCHECK	{location}/{Sample_Name}/{Sample_Name}.snpcheck.txt	{location}/{Sample_Name}/{Sample_Name}.snpcheck.txt
+SUMMARYSHEET	{location}/{Sample_Name}/{Sample_Name}.summarysheet.txt	{location}/{Sample_Name}/{Sample_Name}.summarysheet.txt
+FCHANGES_SUPERMUTANT_NONORMAL	{location}/{Sample_Name}/nonormal/{Sample_Name}.Fchanges_supermutant_nonormal.txt	{location}/{Sample_Name}/nonormal/{Sample_Name}.Fchanges_supermutant_nonormal.txt
+FCHANGES_SUPERMUTANT_NONORMAL_REPORTED_CONSEQ	{location}/{Sample_Name}/nonormal/{Sample_Name}.Fchanges_supermutant_nonormal_reported_conseq.txt	{location}/{Sample_Name}/nonormal/{Sample_Name}.Fchanges_supermutant_nonormal_reported_conseq.txt

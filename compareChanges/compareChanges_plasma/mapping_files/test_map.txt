@@ -1,0 +1,2 @@
+HASH_KEY_LOOKUP	takeda-crc-plasma-4.0.0b1	takeda-crc-plamsa-4.1.0b8
+AUTOBLATHG19CHANGES	{location}/{Sample_Name}/misc/{Sample_Name}.AutoBLAThg19Changes.txt.gz	{location}/{Sample_Name}/misc/{Sample_Name}.AutoBLAThg19Changes.txt.gz

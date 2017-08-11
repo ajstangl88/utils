@@ -1,0 +1,7 @@
+HASH_KEY_LOOKUP	plasma-4.1.0b5	plasma-4.2.0b1
+STR_ALLCHANGES	{location}/{Sample_Name}/{Sample_Name}.allchanges.txt	{location}/{Sample_Name}/{Sample_Name}.allchanges.txt
+STR_SNPCHECK_ALL	{location}/{Sample_Name}/{Sample_Name}.snpcheck_all.txt	{location}/{Sample_Name}/{Sample_Name}.snpcheck_all.txt
+STR_SNPCHECK_INFSNPS_ALL	{location}/{Sample_Name}/{Sample_Name}.snpcheck_infsnps_all.txt	{location}/{Sample_Name}/{Sample_Name}.snpcheck_infsnps_all.txt
+STR_SNPCHECK_INFSNPS	{location}/{Sample_Name}/{Sample_Name}.snpcheck_infsnps.txt	{location}/{Sample_Name}/{Sample_Name}.snpcheck_infsnps.txt
+STR_SNPCHECK_SUMMARY	{location}/{Sample_Name}/{Sample_Name}.snpcheck_summary.txt	{location}/{Sample_Name}/{Sample_Name}.snpcheck_summary.txt
+STR_SUMMARY	{location}/{Sample_Name}/{Sample_Name}.summarysheet.txt	{location}/{Sample_Name}/{Sample_Name}.summarysheet.txt
